@@ -18,8 +18,11 @@ import { useSearchParams } from "react-router";
 const Dashboard = () => {
   const [searchParams] = useSearchParams();
   const workspaceId = searchParams.get("workspaceId");
-
-  const { data, isPending } = useGetWorkspaceStatsQuery(workspaceId!) as {
+  if (!workspaceId) {
+  return <div>Please select a workspace first.</div>;
+}
+console.log("workspaceId:", workspaceId);
+const { data, isPending } = useGetWorkspaceStatsQuery(workspaceId!) as {
     data: {
       stats: StatsCardProps;
       taskTrendsData: TaskTrendsData[];
@@ -32,6 +35,7 @@ const Dashboard = () => {
     isPending: boolean;
   };
 
+console.log("data:", data);
   if (isPending || !data) {
   return (
     <div>

@@ -41,11 +41,11 @@ const Workspaces = () => {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {workspaces.map((ws) => (
+          {(workspaces || []).map((ws) => (
             <WorkspaceCard key={ws._id} workspace={ws} />
           ))}
 
-          {workspaces.length === 0 && (
+          {(workspaces || []).length === 0 && (
             <NoDataFound
               title="No workspaces found"
               description="Create a new workspace to get started"

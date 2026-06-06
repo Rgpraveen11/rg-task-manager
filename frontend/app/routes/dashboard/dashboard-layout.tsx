@@ -22,7 +22,7 @@ const DashboardLayout = () => {
   const [currentWorkspace, setCurrentWorkspace] = useState<Workspace | null>(
     null
   );
-
+console.log(currentWorkspace);
   if (isLoading) {
     return <Loader />;
   }

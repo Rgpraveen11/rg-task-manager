@@ -31,6 +31,7 @@ const Members = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const workspaceId = searchParams.get("workspaceId");
+  console.log("workspaceId =", workspaceId);
   const initialSearch = searchParams.get("search") || "";
   const [search, setSearch] = useState<string>(initialSearch);
 
