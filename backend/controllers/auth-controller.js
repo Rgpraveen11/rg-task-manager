@@ -81,7 +81,7 @@ const loginUser = async (req, res) => {
       return res.status(400).json({ message: "Invalid email or password" });
     }
 
-    if (!user.isEmailVerified) {
+    if (false) {
       const existingVerification = await Verification.findOne({
         userId: user._id,
       });
