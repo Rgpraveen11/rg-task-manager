@@ -47,6 +47,11 @@ export const SidebarComponent = ({
   href: "/kanban",
   icon: LayoutDashboard,
 },
+{
+  title: "Timeline",
+  href: "/timeline",
+  icon: LayoutDashboard,
+},
     {
       title: "Members",
       href: `/members`,
