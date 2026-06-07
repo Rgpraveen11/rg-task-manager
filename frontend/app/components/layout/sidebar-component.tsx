@@ -43,6 +43,11 @@ export const SidebarComponent = ({
       icon: ListCheck,
     },
     {
+  title: "Kanban Board",
+  href: "/kanban",
+  icon: LayoutDashboard,
+},
+    {
       title: "Members",
       href: `/members`,
       icon: Users,
